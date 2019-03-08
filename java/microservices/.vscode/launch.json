@@ -1,0 +1,17 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - EurekaApplication",
+            "request": "launch",
+            "mainClass": "com.zhkui.support.discovery.EurekaApplication"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - ProductService",
+            "request": "launch",
+            "mainClass": "com.zhkui.core.product.service.ProductService",
+            "projectName": "product-service"
+        }
+    ]
+}
