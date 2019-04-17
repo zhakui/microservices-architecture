@@ -1,6 +1,10 @@
 server:
   port: 8020
 
+service:
+  defaultMinMs: 100
+  defaultMaxMs: 20
+
 eureka:
   client:
     serviceUrl:
