@@ -1,3 +1,6 @@
+server:
+  port: 8030
+
 eureka:
   client:
     serviceUrl:
