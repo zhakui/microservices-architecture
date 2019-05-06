@@ -2,24 +2,24 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CodeLens (Launch) - ZuulApplication",
+            "request": "launch",
+            "mainClass": "com.zhkui.support.edge.ZuulApplication",
+            "projectName": "edge-service"
+        },
+        {
+            "type": "java",
             "name": "CodeLens (Launch) - EurekaApplication",
             "request": "launch",
-            "mainClass": "com.zhkui.support.discovery.EurekaApplication",
+            "mainClass": "src.main.java.com.zhkui.support.discovery.EurekaApplication",
             "projectName": "discovery-service"
         },
         {
             "type": "java",
-            "name": "CodeLens (Launch) - ProductCompositeService",
+            "name": "CodeLens (Launch) - EurekaApplication",
             "request": "launch",
-            "mainClass": "com.zhkui.composite.product.service.ProductCompositeService",
-            "projectName": "productcomposite"
-        },
-        {
-            "type": "java",
-            "name": "CodeLens (Launch) - ProductService",
-            "request": "launch",
-            "mainClass": "com.zhkui.core.product.service.ProductService",
-            "projectName": "product-service"
+            "mainClass": "com.zhkui.support.discovery.EurekaApplication",
+            "projectName": "discovery-service"
         }
     ]
 }

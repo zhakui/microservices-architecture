@@ -1,11 +1,11 @@
 server:
   port: 8020
 
-service:
-  defaultMinMs: 100
-  defaultMaxMs: 20
-
 eureka:
   client:
     serviceUrl:
       defaultZone: http://localhost:8000/eureka/
+
+service:
+  defaultMinMs: 100
+  defaultMaxMs: 20
