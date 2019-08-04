@@ -12,6 +12,13 @@
     <groupId>com.zhkui</groupId>
     <artifactId>productcomposite</artifactId>
     <version>1.0-SNAPSHOT</version>
+    <packaging>pom</packaging>
+
+    <modules>    
+        <module>../../core/product-service</module>    
+        <module>../../core/recommendation-service</module>    
+        <module>../../core/review-service</module>  
+    </modules>  
     
     <properties>
         <java.version>1.8</java.version>

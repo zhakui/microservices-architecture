@@ -6,13 +6,19 @@
     <parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
+<<<<<<< HEAD
 		<version>2.1.6.RELEASE</version>
 		<relativePath/> <!-- lookup parent from repository -->
+=======
+		<version>1.5.19.RELEASE</version>
+		<relativePath/>
+>>>>>>> 1badb4e2d4fd7770aa200a15a31b7657a79f77a7
 	</parent>
 
     <groupId>com.zhkui</groupId>
     <artifactId>product-service</artifactId>
     <version>1.0-SNAPSHOT</version>
+    <packaging>pom</packaging>
     
     <properties>
         <java.version>1.8</java.version>

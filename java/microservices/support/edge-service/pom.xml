@@ -5,7 +5,11 @@
      <parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
+<<<<<<< HEAD
 		<version>1.5.21.RELEASE</version>
+=======
+		<version>1.5.19.RELEASE</version>
+>>>>>>> 1badb4e2d4fd7770aa200a15a31b7657a79f77a7
 		<relativePath/>
 	</parent>
 
@@ -22,12 +26,25 @@
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter</artifactId>
+<<<<<<< HEAD
             <version>1.3.6.RELEASE</version>
+=======
+            <version>1.3.5.RELEASE</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-eureka-server</artifactId>
+            <version>1.4.6.RELEASE</version>
+>>>>>>> 1badb4e2d4fd7770aa200a15a31b7657a79f77a7
         </dependency>
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-zuul</artifactId>
+<<<<<<< HEAD
             <version>1.4.7.RELEASE</version>
+=======
+            <version>1.4.6.RELEASE</version>
+>>>>>>> 1badb4e2d4fd7770aa200a15a31b7657a79f77a7
         </dependency>
         <dependency>
 			<groupId>org.springframework.boot</groupId>

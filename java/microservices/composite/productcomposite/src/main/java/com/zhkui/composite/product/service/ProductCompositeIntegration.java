@@ -13,7 +13,11 @@ import org.springframework.web.client.RestTemplate;
 import com.zhkui.core.product.model.Product;
 import com.zhkui.core.recommendation.model.Recommendation;
 import com.zhkui.core.review.model.Review;
+<<<<<<< HEAD
 import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
+=======
+
+>>>>>>> 1badb4e2d4fd7770aa200a15a31b7657a79f77a7
 import java.io.IOException;
 import java.net.URI;
 import java.util.List;
@@ -31,7 +35,11 @@ public class ProductCompositeIntegration {
     // -------- //
     // PRODUCTS //
     // -------- //
+<<<<<<< HEAD
     @HystrixCommand(fallbackMethod="defaultProduct")
+=======
+
+>>>>>>> 1badb4e2d4fd7770aa200a15a31b7657a79f77a7
     public ResponseEntity<Product> getProduct(int productId) {
 
         URI uri = util.getServiceUrl("product", "http://localhost:8081/product");
@@ -165,10 +173,13 @@ public class ProductCompositeIntegration {
         }
     }
 
+<<<<<<< HEAD
     public ResponseEntity<Product> defaultProduct(int productId) {
         return util.createOkResponse(new Product(1001,"juzi",3));
     }
 
+=======
+>>>>>>> 1badb4e2d4fd7770aa200a15a31b7657a79f77a7
 // FIXME: DOESN'T WORK. GIVER ERORS LIKE: Caused by: java.lang.ClassCastException: java.util.LinkedHashMap cannot be cast to se.callista.microservises.core.recommendation.model.Recommendation
 //    private <T> T responseString2Type(ResponseEntity<String> response) {
 //        try {

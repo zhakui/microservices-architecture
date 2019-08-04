@@ -2,6 +2,7 @@
     "configurations": [
         {
             "type": "java",
+<<<<<<< HEAD
             "name": "CodeLens (Launch) - ConfigApplication",
             "request": "launch",
             "mainClass": "com.zhkui.support.config.ConfigApplication",
@@ -16,6 +17,8 @@
         },
         {
             "type": "java",
+=======
+>>>>>>> 1badb4e2d4fd7770aa200a15a31b7657a79f77a7
             "name": "CodeLens (Launch) - ZuulApplication",
             "request": "launch",
             "mainClass": "com.zhkui.support.edge.ZuulApplication",
@@ -25,11 +28,16 @@
             "type": "java",
             "name": "CodeLens (Launch) - EurekaApplication",
             "request": "launch",
+<<<<<<< HEAD
             "mainClass": "com.zhkui.support.discovery.EurekaApplication",
+=======
+            "mainClass": "src.main.java.com.zhkui.support.discovery.EurekaApplication",
+>>>>>>> 1badb4e2d4fd7770aa200a15a31b7657a79f77a7
             "projectName": "discovery-service"
         },
         {
             "type": "java",
+<<<<<<< HEAD
             "name": "CodeLens (Launch) - ProductCompositeService",
             "request": "launch",
             "mainClass": "com.zhkui.composite.product.service.ProductCompositeService",
@@ -81,6 +89,12 @@
             "mainClass": "com.zhkui.composite.product.ProductCompositeServiceApplication",
             "projectName": "productcomposite",
             "args": ""
+=======
+            "name": "CodeLens (Launch) - EurekaApplication",
+            "request": "launch",
+            "mainClass": "com.zhkui.support.discovery.EurekaApplication",
+            "projectName": "discovery-service"
+>>>>>>> 1badb4e2d4fd7770aa200a15a31b7657a79f77a7
         }
     ]
 }

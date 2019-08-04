@@ -1,6 +1,12 @@
 spring:
   application:
     name: edgeserver
+<<<<<<< HEAD
   #cloud:
   #  config:
   #    uri: ${vcap.services.${PREFIX:}configserver.credentials.uri:http://user:password@localhost:8888}
+=======
+  cloud:
+    config:
+      uri: ${vcap.services.${PREFIX:}configserver.credentials.uri:http://user:password@localhost:8888}
+>>>>>>> 1badb4e2d4fd7770aa200a15a31b7657a79f77a7
