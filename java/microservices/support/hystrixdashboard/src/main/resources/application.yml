@@ -1,0 +1,10 @@
+info:
+  component: Hystrix Dashboard
+
+server:
+  port: 80870
+
+logging:
+  level:
+    ROOT: INFO
+    org.springframework.web: INFO

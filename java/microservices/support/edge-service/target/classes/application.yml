@@ -12,9 +12,19 @@ endpoints:
 zuul:
   ignoredServices: "*"
   routes:
-    productcomposite:
-      path: /productcomposite/**
+    product:
+      path: /product/**
+      url: http://192.168.1.6:8080/product
 #      stripPrefix: false
+    review:
+      path: /review/**
+      service-id: review
+#      stripPrefix: false
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8000/eureka/
 
 server:
   port: 8765

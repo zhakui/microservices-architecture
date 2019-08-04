@@ -2,6 +2,27 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CodeLens (Launch) - ConfigApplication",
+            "request": "launch",
+            "mainClass": "com.zhkui.support.config.ConfigApplication",
+            "projectName": "config-service"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - ConfigApplication",
+            "request": "launch",
+            "mainClass": "com.zhkui.support.config.ConfigApplication",
+            "projectName": "config-server"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - ZuulApplication",
+            "request": "launch",
+            "mainClass": "com.zhkui.support.edge.ZuulApplication",
+            "projectName": "edge-service"
+        },
+        {
+            "type": "java",
             "name": "CodeLens (Launch) - EurekaApplication",
             "request": "launch",
             "mainClass": "com.zhkui.support.discovery.EurekaApplication",
@@ -20,6 +41,46 @@
             "request": "launch",
             "mainClass": "com.zhkui.core.product.service.ProductService",
             "projectName": "product-service"
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-ProductServiceApplication<product-service>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "console": "internalConsole",
+            "mainClass": "com.zhkui.core.product.ProductServiceApplication",
+            "projectName": "product-service",
+            "args": ""
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-RecommendationServicepplication<recommendation-service>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "console": "internalConsole",
+            "mainClass": "com.zhkui.core.recommendation.RecommendationServicepplication",
+            "projectName": "recommendation-service",
+            "args": ""
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-ReviewServiceApplication<review-service>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "console": "internalConsole",
+            "mainClass": "com.zhkui.core.review.ReviewServiceApplication",
+            "projectName": "review-service",
+            "args": ""
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-ProductCompositeServiceApplication<productcomposite>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "console": "internalConsole",
+            "mainClass": "com.zhkui.composite.product.ProductCompositeServiceApplication",
+            "projectName": "productcomposite",
+            "args": ""
         }
     ]
 }

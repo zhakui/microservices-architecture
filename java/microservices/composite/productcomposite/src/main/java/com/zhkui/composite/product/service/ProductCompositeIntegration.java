@@ -13,7 +13,7 @@ import org.springframework.web.client.RestTemplate;
 import com.zhkui.core.product.model.Product;
 import com.zhkui.core.recommendation.model.Recommendation;
 import com.zhkui.core.review.model.Review;
-
+import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 import java.io.IOException;
 import java.net.URI;
 import java.util.List;
@@ -31,7 +31,7 @@ public class ProductCompositeIntegration {
     // -------- //
     // PRODUCTS //
     // -------- //
-
+    @HystrixCommand(fallbackMethod="defaultProduct")
     public ResponseEntity<Product> getProduct(int productId) {
 
         URI uri = util.getServiceUrl("product", "http://localhost:8081/product");
@@ -163,6 +163,10 @@ public class ProductCompositeIntegration {
             LOG.warn("RTE-err. Failed to read JSON", re);
             throw re;
         }
+    }
+
+    public ResponseEntity<Product> defaultProduct(int productId) {
+        return util.createOkResponse(new Product(1001,"juzi",3));
     }
 
 // FIXME: DOESN'T WORK. GIVER ERORS LIKE: Caused by: java.lang.ClassCastException: java.util.LinkedHashMap cannot be cast to se.callista.microservises.core.recommendation.model.Recommendation
