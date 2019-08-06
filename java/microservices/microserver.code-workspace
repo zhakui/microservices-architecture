@@ -1,0 +1,16 @@
+{
+	"folders": [
+		{
+			"path": "support"
+		},
+		{
+			"path": "core"
+		},
+		{
+			"path": "composite"
+		}
+	],
+	"settings": {
+		"java.configuration.updateBuildConfiguration": "automatic"
+	}
+}
