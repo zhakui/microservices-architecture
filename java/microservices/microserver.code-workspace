@@ -1,12 +1,15 @@
 {
 	"folders": [
 		{
+			"name": "support",
 			"path": "support"
 		},
 		{
+			"name": "core",
 			"path": "core"
 		},
 		{
+			"name": "composite",
 			"path": "composite"
 		}
 	],
