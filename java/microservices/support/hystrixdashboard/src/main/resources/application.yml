@@ -2,7 +2,7 @@ info:
   component: Hystrix Dashboard
 
 server:
-  port: 80870
+  port: 8070
 
 logging:
   level:
