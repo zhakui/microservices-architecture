@@ -1,4 +1,6 @@
+
 spring:
+  profiles: docker
   application:
     name: eureka
 
