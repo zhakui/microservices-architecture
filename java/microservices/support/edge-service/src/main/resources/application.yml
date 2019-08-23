@@ -14,7 +14,7 @@ zuul:
   routes:
     product:
       path: /product/**
-      url: http://192.168.1.6:8080/product
+      url: http://localhost:8080/product
 #      stripPrefix: false
     review:
       path: /review/**
@@ -24,7 +24,7 @@ zuul:
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://localhost:8000/eureka/
+      defaultZone: http://eureka:8000/eureka/
 
 server:
   port: 8765

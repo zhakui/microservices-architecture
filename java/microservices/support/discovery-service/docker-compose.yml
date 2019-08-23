@@ -1,0 +1,17 @@
+version: "3"
+
+
+services:
+  eureka:
+    build: .
+    ports:
+      - "8000:8000"
+    networks:
+      - default
+
+networks:
+  default:
+    external:
+      name: my-net
+
+ 

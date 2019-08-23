@@ -1,0 +1,16 @@
+version: "3"
+services:
+
+ edgeservice:
+    build: ./edge-service
+    ports:
+      - "8765:8765"
+    expose:
+      - 8761
+    networks:
+      - default
+
+networks:
+  default:
+    external:
+      name: my-net
