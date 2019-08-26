@@ -1,0 +1,4 @@
+#protoc --proto_path=api/proto/v1 --go_out=plugins=grpc:pkg/api/v1 ArticleManagementService.proto
+protoc -I/usr/local/include -I.   -I$GOPATH/src   -I$GOPATH/src/github.com/grpc-ecosystem/grpc-gateway/third_party/googleapis   --go_out=plugins=grpc:pkg/api/v1   api/proto/v1/ArticleManagementService.proto
+protoc -I/usr/local/include -I.   -I$GOPATH/src   -I$GOPATH/src/github.com/grpc-ecosystem/grpc-gateway/third_party/googleapis   --grpc-gateway_out=logtostderr=true:pkg/api/v1   api/proto/v1/ArticleManagementService.proto
+protoc -I/usr/local/include -I.   -I$GOPATH/src   -I$GOPATH/src/github.com/grpc-ecosystem/grpc-gateway/third_party/googleapis   --swagger_out=logtostderr=true:pkg/api/v1   api/proto/v1/ArticleManagementService.proto
