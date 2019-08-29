@@ -9,7 +9,7 @@ import (
 
 	"google.golang.org/grpc"
 
-	"product-service/api"
+	v1 "product-service/api"
 )
 
 // RunServer runs gRPC service to publish ArticleManagement service

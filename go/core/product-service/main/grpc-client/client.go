@@ -7,7 +7,7 @@ import (
 
 	"google.golang.org/grpc"
 
-	"../../api/"
+	v1 "product-service/api"
 )
 
 const (
@@ -27,7 +27,8 @@ func main() {
 
 	ctx := context.Background()
 	artRequest := &v1.ArtRequest{
-		Id: 1,
+		Api: "1",
+		Id:  1,
 	}
 	artInfor, _ := c.GetArticleInfor(ctx, artRequest)
 	fmt.Printf("%+v\n", artInfor)

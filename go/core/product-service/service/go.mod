@@ -3,7 +3,9 @@ module product-service/service
 go 1.12
 
 require (
+	github.com/go-sql-driver/mysql v1.4.1
 	github.com/golang/protobuf v1.3.2
+	google.golang.org/grpc v1.21.1
 	product-service/api v0.0.0-00010101000000-000000000000
 )
 

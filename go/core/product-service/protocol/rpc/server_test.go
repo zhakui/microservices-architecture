@@ -2,9 +2,8 @@ package grpc
 
 import (
 	"context"
+	v1 "product-service/api"
 	"testing"
-
-	"product-service/api"
 )
 
 func TestRunServer(t *testing.T) {

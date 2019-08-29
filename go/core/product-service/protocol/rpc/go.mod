@@ -27,6 +27,7 @@ replace (
 	google.golang.org/grpc => github.com/grpc/grpc-go v1.23.0
 	product-service/api => ../../api
 )
+
 require (
 	google.golang.org/grpc v1.21.1
 	product-service/api v0.0.0-00010101000000-000000000000

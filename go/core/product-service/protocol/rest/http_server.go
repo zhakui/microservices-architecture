@@ -11,7 +11,7 @@ import (
 	"golang.org/x/net/context"
 	"google.golang.org/grpc"
 
-	"product-service/api"
+	v1 "product-service/api"
 )
 
 // RunServer runs HTTP/REST gateway
