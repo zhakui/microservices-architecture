@@ -32,6 +32,8 @@ replace (
 )
 
 require (
+	github.com/go-sql-driver/mysql v1.4.1
+	product-service/api v0.0.0
 	product-service/protocol/rest v0.0.0-00010101000000-000000000000
 	product-service/protocol/rpc v0.0.0-00010101000000-000000000000
 	product-service/service v0.0.0-00010101000000-000000000000
