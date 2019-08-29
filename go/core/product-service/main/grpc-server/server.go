@@ -2,46 +2,43 @@ package main
 
 import (
 	"context"
-	"database/sql"
 	"fmt"
 	"os"
 
 	"product-service/protocol/rest"
 	grpc "product-service/protocol/rpc"
 	v1 "product-service/service"
+
+	_ "github.com/go-sql-driver/mysql"
 )
 
 func main() {
 	ctx := context.Background()
 
-	// dsn := fmt.Sprintf("%s:%s@tcp(%s)/%s?%s",
-	// 	"root",
-	// 	"123456",
-	// 	"localhost:3306",
-	// 	"product",
-	// 	"parseTime=true")
+	dsn := fmt.Sprintf("%s:%s@tcp(%s)/%s?%s",
+		"root",
+		"123456",
+		"localhost:3306",
+		"product",
+		"parseTime=true")
 
-	// mydb := &v1.MySQLService{}
+	mydb := &v1.MySQLService{}
 
-	// mydb.Open(ctx, dsn)
+	mydb.Open(ctx, dsn)
 
-	// artdb := v1.NewArticleDB(mydb)
-	// fmt.Println(artdb.Readall(ctx))
+	artdb := v1.NewArticleDB(mydb)
+	fmt.Println(artdb.Readall(ctx))
 
-	db, err := sql.Open("mysql", "root:123456@/product?charset=utf8")
-	fmt.Print(db)
-	if err == nil {
-		fmt.Print("1\n")
-		rows, _ := db.Query("select title FROM artcile;")
-		fmt.Print(rows)
-		var title string
-		if err := rows.Scan(title); err != nil {
+	// db, _ := sql.Open("mysql", "root:123456@tcp(localhost:3306)/test?charset=utf8")
+	// conn, _ := db.Conn(ctx)
 
-		}
-		fmt.Print(title)
+	// rows, _ := conn.QueryContext(ctx, `SELECT test_name FROM test_tbl;`)
+	// rows.Next()
+	// var testName string
+	// if err := rows.Scan(&testName); err != nil {
 
-		rows.Close()
-	}
+	// }
+	// fmt.Print(testName)
 
 	// run HTTP gateway
 	go func() {
