@@ -7,20 +7,18 @@ import (
 	v1 "product-service/api"
 	"time"
 
-	_ "github.com/go-sql-driver/mysql"
-	"github.com/golang/protobuf/ptypes"
 	"google.golang.org/grpc/codes"
 	"google.golang.org/grpc/status"
 )
 
 // ArticleDB is the API for Article.
 type ArticleDB struct {
-	dbo *MySQLService
+	dbo DbOperation
 }
 
 // DbOperation is a API database operation
 type DbOperation interface {
-	Open(connstr string) (*sql.DB, error)
+	Open(ctx context.Context, connstr string) (*sql.DB, error)
 	Connect(context.Context) (*sql.Conn, error)
 	Close()
 }
@@ -38,7 +36,6 @@ func (s *MySQLService) Open(ctx context.Context, connstr string) (*sql.DB, error
 		return nil, status.Error(codes.Unknown, "Open database fail:\n"+err.Error())
 	}
 	s.db = db
-	fmt.Print(db)
 	return db, nil
 }
 
@@ -59,7 +56,7 @@ func (s *MySQLService) Close() {
 }
 
 // NewArticleDB creates ArticleDB service
-func NewArticleDB(dbo *MySQLService) *ArticleDB {
+func NewArticleDB(dbo DbOperation) *ArticleDB {
 	return &ArticleDB{dbo: dbo}
 }
 
@@ -67,27 +64,26 @@ func NewArticleDB(dbo *MySQLService) *ArticleDB {
 func (a *ArticleDB) Readall(ctx context.Context) []*v1.Article {
 	dbconn, _ := a.dbo.Connect(ctx)
 	defer dbconn.Close()
-	rows, err := a.dbo.db.Query("SELECT * FROM artcile")
-	fmt.Print(dbconn)
+	// rows, err := dbconn.QueryContext(ctx, `SELECT test_name FROM test_tbl;`)
+	//
+
+	rows, _ := dbconn.QueryContext(ctx, `SELECT * FROM artcile;`)
 	defer rows.Close()
+
 	//fmt.Print(rows)
 
 	list := []*v1.Article{}
 	var reminder time.Time
 	for rows.Next() {
-		fmt.Print(1)
 		ar := new(v1.Article)
-
 		if err := rows.Scan(&ar.Id, &ar.Title, &ar.Author, &ar.Category, reminder); err != nil {
-			fmt.Print(2)
-			return nil
+			fmt.Println(err)
 		}
-		ar.LastUpdated, err = ptypes.TimestampProto(reminder)
-		if err != nil {
-			return nil
-		}
+		// 	ar.LastUpdated, err = ptypes.TimestampProto(reminder)
+		// 	if err != nil {
+		// 		return nil
+		// 	}
 		list = append(list, ar)
-		fmt.Print(ar.Id)
 	}
 	return list
 }
