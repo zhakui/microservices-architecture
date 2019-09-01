@@ -1,0 +1,81 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "api/proto/v1/ArticleManagementService.proto",
+    "version": "version not set"
+  },
+  "schemes": [
+    "http",
+    "https"
+  ],
+  "consumes": [
+    "application/json"
+  ],
+  "produces": [
+    "application/json"
+  ],
+  "paths": {
+    "/v1/ArticleInfor/{id}": {
+      "post": {
+        "operationId": "getArticleInfor",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/v1ArtRespones"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "format": "int64"
+          }
+        ],
+        "tags": [
+          "ArticleManagementService"
+        ]
+      }
+    }
+  },
+  "definitions": {
+    "v1ArtRespones": {
+      "type": "object",
+      "properties": {
+        "api": {
+          "type": "string"
+        },
+        "article": {
+          "$ref": "#/definitions/v1Article"
+        }
+      }
+    },
+    "v1Article": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "format": "int64"
+        },
+        "title": {
+          "type": "string"
+        },
+        "author": {
+          "type": "string",
+          "format": "int64"
+        },
+        "category": {
+          "type": "string",
+          "format": "int64"
+        },
+        "last_updated": {
+          "type": "string",
+          "format": "date-time"
+        }
+      }
+    }
+  }
+}
